@@ -1,0 +1,97 @@
+.hero__pages {
+  background: $whitehero;
+  border-radius: 2rem;
+  margin: 1rem 0;
+  .wreapper__sec {
+    justify-content: space-between;
+  }
+  .cole {
+    padding: 4.5rem;
+  }
+  .col__img {
+    object-fit: cover;
+    margin: -0.4rem;
+  }
+  overflow: hidden;
+  .title {
+    font-size: 3.5rem;
+    font-weight: 500;
+  }
+  .title__paragraph {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    color: $whiteGray;
+  }
+  .sec__wreap {
+    margin-top: 2.5rem;
+    border: 2px solid $mainGreen;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    background-color: $mainGreen;
+    color: $mainWhite;
+    font-size: large;
+    cursor: pointer;
+  }
+  .sec__wreap:hover {
+    background-color: $mainWhite;
+    color: $mainGreen;
+  }
+}
+.section__dastavke {
+  padding: 4.5rem;
+  background-color: $secondary;
+  border: 2px solid $secondary;
+  border-radius: 2rem;
+  .sec__wreap {
+    margin-top: 2.5rem;
+    border: 2px solid $mainGreen;
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    background-color: $mainGreen;
+    color: $mainWhite;
+    font-size: large;
+    cursor: pointer;
+  }
+  .sec__wreap:hover {
+    background-color: $mainWhite;
+    color: $mainGreen;
+  }
+  .img__wreapper {
+    object-fit: cover;
+    width: 40rem;
+  }
+  .wreapper__sec {
+    justify-content: space-between;
+  }
+  .title__wreapper {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+  }
+}
+
+.card__wreapper.row {
+  gap: 20px;
+}
+.card__wreapper.row .col {
+  flex: 1 250px;
+}
+
+.homepage {
+  position: relative;
+  .img__home {
+    position: absolute;
+    top: 45%;
+    left: 45%;
+  }
+}
+.category__type {
+  .category {
+    display: flex;
+    font-size: 2rem;
+    font-weight: 500;
+    .category__link {
+      padding:0 2.5rem ;
+    }
+  }
+}
