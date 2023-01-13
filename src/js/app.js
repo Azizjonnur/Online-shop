@@ -2,8 +2,13 @@ import "./style";
 import {
   singIn,
   singUp,
+  getcategories,
+  getproducts,
 } from "../api";
 import { SignUp } from "./sign_up";
+import { displaycategory } from "./category";
+import { displayproduct } from "./prodact";
+
 
 document.addEventListener("DOMContentLoaded", async (e) => {
   addEventListener("popstate", (event) => {
@@ -14,8 +19,17 @@ document.addEventListener("DOMContentLoaded", async (e) => {
 
   const page = location.pathname;
   if (page === "/index.html" || page === "/") {
-   
+    getcategories() .then((data) => {
+      console.log(data);
+      displaycategory(data.data.payload);
+    }) 
+    getproducts() .then((data) => {
+      console.log(data);
+      displayproduct(data.data.data)
+    })
   }
+
+
   if (page === "/sign-up.html" || page === "/sign-up") {
     const formSignUp = document.querySelector(".form__type");
     formSignUp.addEventListener("submit", (e) => {

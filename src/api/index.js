@@ -27,3 +27,13 @@ export function singUp(quary) {
     role: "user",
   });
 }
+
+export function getcategories() {
+  let url = `categories/`;
+  return axios.get(url );
+}
+
+export function getproducts() {
+  let url = `products/`;
+  return axios.get(url );
+}
