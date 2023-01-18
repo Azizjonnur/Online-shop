@@ -4,31 +4,33 @@ import {
   singUp,
   getcategories,
   getproducts,
+  getcart,
+  addcart,
+  addCart,
+  getCart,
 } from "../api";
 import { SignUp } from "./sign_up";
 import { displaycategory } from "./category";
 import { displayproduct } from "./prodact";
-
+import { displayCart } from "./cart";
 
 document.addEventListener("DOMContentLoaded", async (e) => {
   addEventListener("popstate", (event) => {
     location.reload();
   });
 
-  
-
   const page = location.pathname;
   if (page === "/index.html" || page === "/") {
-    getcategories() .then((data) => {
+    getcategories().then((data) => {
       console.log(data);
       displaycategory(data.data.payload);
-    }) 
-    getproducts() .then((data) => {
+    });
+    getproducts().then((data) => {
       console.log(data);
-      displayproduct(data.data.data)
-    })
+      displayproduct(data.data.data);
+    });
+    getAttr(".product", addCart);
   }
-
 
   if (page === "/sign-up.html" || page === "/sign-up") {
     const formSignUp = document.querySelector(".form__type");
@@ -109,4 +111,17 @@ document.addEventListener("DOMContentLoaded", async (e) => {
     });
   }
 
+  if (page === "/cart.html" || page === "/cart") {
+    getCart().then((data) => {
+      console.log(data);
+      displayCart(data.data.payload.items)
+    });
+  }
 });
+function getAttr(eName, funcName) {
+  document.onclick = (e) => {
+    let attr = e.target.closest(eName).getAttribute("data-id");
+    funcName(localStorage.userId, attr);
+    return attr;
+  };
+}

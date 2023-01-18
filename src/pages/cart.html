@@ -1,111 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <header>
-        <div class="container" data-id="">
-          <nav class="navbar">
-            <li class="logo__item">
-              <div href="./index.html" class="logo__link">
-                <img width="100%" src="../assets/img/Group 1.png" alt="logo" />
+      <div class="container" data-id="">
+        <nav class="navbar">
+          <li class="logo__item">
+            <div href="./index.html" class="logo__link">
+              <img width="100%" src="../assets/img/Group 1.png" alt="logo" />
+            </div>
+          </li>
+          <ul class="nav__menu">
+            <li class="nav__item">
+              <div class="nav__item--link">
+                <div class="navbar__contenrets navbar__btns">Меню</div>
+                <div class="nav__content">
+                  <div class="added__content">
+                    <a href="#"><h4>Menu</h4></a>
+                  </div>
+                  <div class="added__content"><a href="#">Shashliklar</a></div>
+                  <div class="added__content"><a href="#">Salatlar</a></div>
+                  <div class="added__content"><a href="#">Ichimliklar</a></div>
+                </div>
               </div>
             </li>
-            <ul class="nav__menu">
-              <li class="nav__item">
-                <div class="nav__item--link">
-                  <div class="navbar__contenrets navbar__btns">Меню</div>
-                  <div class="nav__content">
-                    <div class="added__content">
-                      <a href="#"><h4>Menu</h4></a>
-                    </div>
-                    <div class="added__content"><a href="#">Shashliklar</a></div>
-                    <div class="added__content"><a href="#">Salatlar</a></div>
-                    <div class="added__content"><a href="#">Ichimliklar</a></div>
-                  </div>
-                </div>
-              </li>
-  
-              <li class="nav__item">
-                <a href="#" class="nav__item--link">Доставка</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__item--link">Оплата</a>
-              </li>
-              <li class="nav__item">
-                <a href="#" class="nav__item--link">Бронь стола</a>
-              </li>
-            </ul>
-            <ul class="connect">
-              <li class="nav__item">
-                <a href="#" class="nav__item--link">
-                  <i class="fa-solid fa-phone"></i>
+
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">Доставка</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">Оплата</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">Бронь стола</a>
+            </li>
+          </ul>
+          <ul class="connect">
+            <li class="nav__item">
+              <a href="#" class="nav__item--link">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </li>
+
+            <li class="nav__item add__person hide">
+              <a class="nav__item--link">
+                <i class="fa-solid fa-user"></i>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <div class="nav__item--link cart__btns">
+                <a href="./cart.html">
+                  <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                  <div class="cart-items">0</div>
                 </a>
-              </li>
-  
-              <li class="nav__item add__person hide">
-                <a class="nav__item--link">
-                  <i class="fa-solid fa-user"></i>
-                </a>
-              </li>
-              <li class="nav__item account__state">
-                <a
-                  href="./sign-in.html"
-                  class="nav__item--link sign__in"
-                  id="account__login"
-                  >Sign-in</a
-                >
-                <a
-                  href="./sign-up.html"
-                  class="nav__item--link sign__up"
-                  id="account__login__up"
-                  >Sign-up</a
-                >
-              </li>
-              <li class="nav__item">
-                <div class="nav__item--link cart__btns">
-                  <a href="./cart.html">
-                    <i class="fa-sharp fa-solid fa-cart-shopping"></i>
-                    <div class="cart-items">0</div>
-                  </a>
-                </div>
-              </li>
-            </ul>
-            <div class="small__header">
-              
-                <i class="fa-solid fa-house-chimney"></i>
-            </div>
-          </nav>
-        </div>
-      </header>
+              </div>
+            </li>
+          </ul>
+          <div class="small__header">
+            <i class="fa-solid fa-house-chimney"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!------------- SECTION START ------------->
     <section>
-        <div class="container">
-            <div class="row">
-                <h1>Корзина</h1>
-                <div class="col__left">
-                    <img width="100%" src="../assets/img/image 46.png" alt="">
-                    <p>Burger</p>
-                    <p>-</p>
-                    <p>1</p>
-                    <p>+</p>
-                    <p>350$</p>
-                </div>
-                <div class="col__right">
-                    <p>№645252</p>
-                    <p>товар в корзине 750 $</p>
-                    <p>Итого в оплате </p>
-                    <p>750 $</p>
-                    <div class="btn">
-                        <button class="btn__cart">Оформить заказ</button>
-                    </div>
-                </div>
-            </div>
+      <div class="container cartdisplay">
+        <div class="row">
+          <h1>Корзина</h1>
         </div>
+      </div>
+      <div class="container row__right">
+        <div class="col__sale">
+          <p>№645252</p>
+          <p>товар в корзине 750 $</p>
+          <p>Итого в оплате</p>
+          <p class="totalSum"></p>
+        </div>
+        <div class="btn">
+          <button class="btn__cart">Оформить заказ</button>
+        </div>
+      </div>
     </section>
+    <!------------- SECTION END ------------->
+
     <script type="module" src="../js/app.js"></script>
-</body>
+  </body>
 </html>

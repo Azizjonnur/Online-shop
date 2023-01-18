@@ -30,10 +30,27 @@ export function singUp(quary) {
 
 export function getcategories() {
   let url = `categories/`;
-  return axios.get(url );
+  return axios.get(url);
 }
 
 export function getproducts() {
   let url = `products/`;
-  return axios.get(url );
+  return axios.get(url);
+}
+
+export function getCart() {
+  let url = `cart/${localStorage.userId}`;
+  return axios.get(url);
+}
+
+export function addCart(id, _id) {
+  if (!id && !_id) {
+    throw "Please insert id parametr";
+  }
+  let url = `cart/${id}/add`;
+  return axios.post(url, {
+    product: `${_id}`,
+    qty: 1,
+    total: 3000,
+  });
 }
