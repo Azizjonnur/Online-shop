@@ -6,7 +6,9 @@ export function displayCart(data = []) {
   const priceNode = document.querySelector(".totalSum");
   data.forEach((cart) => {
     const product = cart.product;
-    result += `         
+    result += `
+    <div class="row__left">
+         
     <div class="col__left" data-id="${cart._id}">
     <img
         class="img__left"
@@ -20,6 +22,8 @@ export function displayCart(data = []) {
       <p>+</p>
       <p>${cart.qty * cart.total}</p>
   </div>
+  </div>
+  
   </div> 
   `;
     totalPrice += product.salePrice * cart.qty;

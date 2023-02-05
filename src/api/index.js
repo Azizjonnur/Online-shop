@@ -54,3 +54,44 @@ export function addCart(id, _id) {
     total: 3000,
   });
 }
+
+export function cartproduct(quary) {
+  let url = `products/`;
+  return axios.post(url, {
+    name: `${quary.name}`,
+    price: `${quary.price}`,
+    salePrice: `${quary.salePrice}`,
+    quantity: `${quary.quantity}`,
+    description: `${quary.description}`,
+    categoryId: `${quary.categoryId}`,
+  });
+}
+
+export function clearcart(empty) {
+  let url = `cart/${localStorage.userId}/empty`;
+  return axios.delete(url);
+}
+
+export function postorder(customer, items, total) {
+  let url = `orders/`;
+  return axios.post(url, {
+      cartId: localStorage.userId,
+      customer: customer,
+      items: items,
+      total: `${total}`
+  });
+}
+
+export function getOrder() {
+  let url = `orders/`;
+  return axios.get(url);
+}
+export function getProfile() {
+  let url = `auth/profile`;
+  return axios.get(url);
+}
+
+export function getFavority(id) {
+  let url = `favorites/all/${id}`;
+  return axios.get(url);
+}

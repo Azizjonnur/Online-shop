@@ -119,14 +119,14 @@
   justify-content: center;
   
 }
+
+
 .products{
   display: flex;
   max-width: 100%; 
-  flex-wrap: wrap;
 }
 .product{
-  margin-right: 5rem;
-  
+  margin-left: 1rem;
 }
 .sec__wreap{
   color: #fff;
@@ -137,4 +137,8 @@
   margin-top: 2.5rem;
   padding: 1rem 2rem;
   font-size: large;
+}
+.wreap__icon{
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
